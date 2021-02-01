@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .box {
+        width: 368px;
+        height: 400px;
+        border: solid 1px;
+        margin: 150px auto;
+    }
+
+    .head {
+        width: 100%;
+        height: 45px;
+        border-bottom: solid 1px;
+        background-color: gray;
+        line-height: 45px;
+        box-sizing: border-box;
+
+    }
+
+    .head li {
+        float: left;
+        /* margin: 0 10px; */
+        /* width: 19%;
+      padding-left: 6px; */
+        box-sizing: border-box;
+
+
+    }
+
+    .head li a {
+        display: block;
+        padding: 0 14px;
+        box-sizing: border-box;
+        /* color: black; */
+
+    }
+
+
+    a.color {
+        background-color: white;
+        color: pink;
+
+    }
+
+    .content {
+        width: 100%;
+        height: 350px;
+
+
+    }
+
+    .content ul {
+        padding: 0 20px;
+    }
+
+    .content li {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .content div {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+    
+
+    <div class="box">
+        <div class="head">
+            <ul>
+                <li>
+                    <a href="javascript:;" class="color" data-name="sz">上证指数</a>
+                </li>
+                <li>
+                    <a href="javascript:;" data-name="sc">深成指数</a>
+                </li>
+                <li>
+                    <a href="javascript:;" data-name="zf">创业板</a>
+                </li>
+                <li>
+                    <a href="javascript:;" data-name="df">道琼斯</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <!-- 对应下面的盒子内容 -->
+        <div class="content">
+            <div class="one" id="sz" style="display:block ">
+                <ul>
+                    <li>
+                        <a href="javascript:;">好</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="one" id="sc" style="display: none">
+                <ul>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">6</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">7</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">8</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">9</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="one" id="zf" style="display: none">
+                <ul>
+                    <li>
+                        <a href="javascript:;">qq</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="one" id="df" style="display: none">
+                <ul>
+                    <li>
+                        <a href="javascript:;">ww</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+<script>
+
+     var as=document.querySelectorAll('.head a');
+     var divs=document.querySelectorAll('.content div');
+     console.log(divs)
+
+     for( var i=0;i<as.length;i++){
+         as[i].onclick=function(){
+
+            // 1.排他方法
+
+            var colors=document.querySelector('.color');
+            colors.classList.remove('color');
+            // 2.选定颜色
+
+            this.classList.add('color');
+                
+            // var names = this.dataset.name;
+
+            
+            for(var j=0;j<divs.length;j++){
+
+                divs[j].style.display="none";
+            }
+
+            document.getElementById(this.dataset.name).style.display = 'block';
+         }
+     }
+
+
+
+</script>
+
+
+   
+</body>
+</html>

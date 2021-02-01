@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        
+        // function Averanger(name, age, sex) {
+        //     this.name = name,
+        //         this.age = age,
+        //         this.sex = sex,
+        //         this.skill = rich
+        // }
+        // Averanger.prototype.say = function () {
+        //     console.log('我叫' + this.name + ',今年' + this.age + '性别' + this.sex);
+        // }
+        // //  var ls=new Averanger('钢铁侠',30,'男');
+        // //  ls.say();
+
+        // Averanger.prototype.can = function () {
+        //     console.log('我会')
+        // }
+
+
+        // function Stu(name, age, sex) {
+        //     this.name = name,
+        //         this.age = age,
+        //         this.sex = sex,
+        //         this.num = 1000
+        // }
+        // Stu.prototype.say = function () {
+        //     console.log('我叫' + this.name + ',今年' + this.age + '性别' + this.sex);
+        // }
+
+        //    以上是原型构造，下面通过继承方式
+
+        //    父类
+        function Human(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+
+        }
+
+        //   方法
+
+        Human.prototype.say = function () {
+            console.log('我叫' + this.name + ',今年' + this.age + '性别' + this.sex);
+        }
+        Human.prototype.can = function () {
+            console.log('巴啦啦小魔仙')
+        }
+
+        // 子类
+
+
+        // function Averanger() {
+        //     Human.call(this,'雷电',20,'男');
+
+        //     // this.skill = rich;
+        // }
+  var sx={}
+  Human.call(sx,'雷电',20,'男');
+
+
+
+        //   子类原型
+        // 更改子类的prototype指向父类
+        // Averanger.prototype = new Human()
+
+
+        // Averanger.prototype.constructor = Averanger
+
+        // var a = new Averanger("雷电下",20,"男","youqian");
+        // console.log(a.rich);
+        // a.say();
+        //    console.log(a)
+        //    console.log(a.constructor)
+
+
+  var sa=new Object()
+
+
+
+
+
+
+
+
+
+
+        function Stu() {
+            this.num = 1000
+        }
+
+
+
+        //   创建
+    </script>
+
+
+
+
+</body>
+
+</html>
