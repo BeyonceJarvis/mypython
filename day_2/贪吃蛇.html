@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jQuery.min.js"></script>
+    <script src="js/food.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            text-align: center
+        }
+
+        .box input {
+            margin-top: 15px;
+            width: 80px;
+            height: 20px;
+        }
+
+        .map {
+            width: 1260px;
+            height: 700px;
+            /* background: url('img/bg1.png'); */
+            margin: 20px auto;
+            box-shadow: 0px 0px 50px 20px pink;
+            position: relative;
+        }
+
+        .food {
+            width: 20px;
+            height: 20px;
+            border: solid 1px;
+            border-radius: 50%;
+            /* background-color:rgb(0.0.0.2); */
+            opacity: 0.7;
+            box-sizing: border-box;
+            animation: food infinite alternate-reverse 0.5s;
+            position: absolute;
+            /* left: 0;
+            top: 0 */
+        }
+
+
+
+        .snake-head,
+        .snake-body {
+            width: 20px;
+            height: 20px;
+            border: solid 1px pink;
+            border-radius: 50%;
+            box-sizing: border-box;
+            position: absolute;
+            /* background-color: orangered; */
+        }
+
+        /* 食物标记动画 */
+        @keyframes food {
+            0% {
+                box-shadow: 0 0 5px 2px gold;
+            }
+
+            100% {
+                box-shadow: 0 0 100px 5px pink;
+            }
+
+        }
+
+
+
+        @keyframes yanse{
+            0%{
+                color: red;
+            }
+            20%{
+                color: orange
+            }
+            40%{
+                color: thistle
+            }
+            60%{
+                color: tomato;
+            }
+            80%{
+                color: gold
+            }
+            90%{
+                color:pink
+            }
+            
+        }
+
+        .dead {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            /* background: blue; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* color: red; */
+            display: none;
+           
+
+        }
+
+        .dead h1 {
+            text-align: center;
+            font: bold 100px '宋体';
+            animation: yanse infinite alternate-reverse 0.5s;
+        }
+        .dead h2{
+            text-align: center;
+            font: bold 100px '宋体';
+            animation: yanse infinite alternate-reverse 0.5s;
+            display: none
+        }
+
+        .dead span {
+            width: 100px;
+            height: 30px;
+            background: skyblue;
+            font: bold 20px/30px '宋体';
+            padding: 10px 20px;
+            cursor: pointer;
+            user-select: none;
+            position: absolute;
+            left: 40%;
+            top:15%;
+        }
+
+        .dead span:hover {
+            background: orange;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+
+    <div class="box">
+        <input type="button" value="start" id="bt_1">
+        <input type="button" value="stop" id="bt_2">
+        <input type="text" value="分数:0" class="sc">
+    </div>
+
+    <div class="map">
+
+        <!-- 小食物的定义 -->
+        <!-- <div class="food" style="left:0;top:0"></div> -->
+
+        <!-- 蛇的组成 -->
+        <!-- <div class="snake-head" style="left:60px;top:20px"></div>
+        <div class="snake-body" style="left:60px;top:0"></div>
+        <div class="snake-body" style="left:40px;top:0"></div> -->
+        
+    </div>
+
+    <div class="dead">
+
+        <h1>面对疾风吧</h1>
+        <h2>aaaa</h2>
+        <span id="bt_3">重新开始</span>
+
+    </div>
+
+    <script>
+    //     var foods = new Food();
+    //     foods.randomLocation();
+    //      // 创建蛇对象
+    // var snakes = new Sanke();
+    // snakes.drawSanke();
+
+
+      var games=new Game();
+
+    //   开始
+   $('#bt_1').click(function(){
+       games.start();
+   })
+   $('#bt_2').click(function(){
+       games.stop();
+   })
+   $('#bt_3').click(function(){
+       games.reSet();
+   })
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
