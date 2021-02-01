@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var x = [1, 2, 4, 5,99];
+
+        var  y=[4,5,6,7,8];
+
+        // var yx=Array.prototype;
+
+
+
+        Array.prototype.Getsum=function(){
+           var sum=0
+           for( var i=0;i<this.length;i++){
+               sum=sum+this[i]
+           };
+
+           return sum;
+       }
+    //    yx.Getmax=function(){
+    //     var max = this[0];
+
+    //     for(var i=0;i<this.length;i++){
+    //         if(max<this[i]){
+    //             max=this[i]
+    //         }
+    //     }
+    //         return max
+
+    //    }
+    var q=x.Getsum();
+    console.log(q);
+
+    // var  q=x.Getmax();
+    // console.log(q)
+
+    var w=y.Getsum();
+    console.log(w)
+
+
+        // function fn() {
+
+        //     for (var i = 0; i < x.length; i++) {
+
+        //         sum = sum + x[i]
+
+        //     }
+        //     return sum
+
+
+        // }
+        // fn()
+
+        // console.log(sum)
+    </script>
+</body>
+
+</html>

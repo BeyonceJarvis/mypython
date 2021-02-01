@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<script>
+
+    // 定义构造函数
+
+
+       function Stu(name,age,sex){
+
+        this.names=name;
+        this.ages=age;
+        this.sexs=sex;
+
+          this.say=function(){
+
+            console.log('我叫'+this.names+',性别'+this.sexs+',今年'+this.ages+'岁');
+          };
+          this.can=function(){
+
+            console.log('我会贪蓝月玩')
+          }
+
+       }
+      var x=new Stu('渣渣辉',20,'男');
+      x.say();
+      console.log(x);
+
+      var y=new Stu('古天乐',30,'女');
+      y.say();
+
+      console.log(y)
+    
+         
+        
+    
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
